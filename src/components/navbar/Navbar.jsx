@@ -13,10 +13,10 @@ const Navbar = () => {
                 </div>
                 <div className="navigation">
                     <ul>
-                        <NavLink to="/" end className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <NavLink to="/profil">
                             <li>Accueil</li>
                         </NavLink>
-                        <NavLink to="/profil" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <NavLink to="/profil" className="nav-active">
                             <li>Profil</li>
                         </NavLink>
                         <NavLink to="/profil#">

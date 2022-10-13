@@ -1,0 +1,30 @@
+.sidebar{
+    background: #000;
+    width: 117px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    &__icons{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        img{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    &__copyright{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform-origin: left;
+        transform: rotate(-90deg);
+        font-size: 12px;
+        white-space: nowrap;
+        color: white;
+    }
+}
