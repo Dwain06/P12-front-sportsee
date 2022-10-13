@@ -1,0 +1,33 @@
+// ---------- VARIABLES ----------
+
+$break-point-mobile: 800px;
+$break-point-tablet: 1140px;
+
+$color-primary: #FF0101;
+$color-bg-grey: #282D30;
+
+$font-primary: 'Roboto', sans-serif;
+
+$padding-page: 20px;
+$margin-container: 20px;
+$max-width: 1240px;
+
+// ---------- MIXINS ----------
+
+@mixin flex-cc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-cb{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+@mixin flex-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
