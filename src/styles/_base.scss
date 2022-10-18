@@ -9,18 +9,15 @@ body{
     margin: 0;
 }
 
-#root{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-h1{
-    text-align: center;
-    color: white;
-    font-family: $font-primary;
+h2{
     font-size: 48px;
     font-weight: 500;
+    margin-bottom: 24px; 
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 500; 
 }
 
 a{
@@ -31,8 +28,8 @@ a{
     }
 }
 
-ul{
-    padding-left: 0;
+.loading{
+    margin: auto;
 }
 
 
