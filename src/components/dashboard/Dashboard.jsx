@@ -39,11 +39,6 @@ const Dashboard = () => {
                         <h3>
                             Félicitation ! Vous avez explosé vos objectifs hier 👏
                         </h3>
-                        <p>
-                            {activity.userId}
-                            {averageSessions.userId}
-                            {performance.userId}
-                        </p>
                     </div>
                     <div className="dashboard__datas">
                         <div className="datas__charts">

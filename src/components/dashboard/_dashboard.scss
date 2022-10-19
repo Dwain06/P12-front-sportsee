@@ -11,4 +11,9 @@
     &__datas{
         display: flex;
     }
+
+    .datas__charts--activity{
+        background: $color-bg-light;
+        padding-top: 55px;
+    }
 }
