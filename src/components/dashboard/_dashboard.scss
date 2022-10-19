@@ -1,10 +1,14 @@
-.dashboard{
+.dashboard {
     margin-left: 240px;
-}
 
-.welcome{
 
-    .name{
-        color: $color-primary;
+    &__welcome {
+
+        .name {
+            color: $color-primary;
+        }
+    }
+    &__datas{
+        display: flex;
     }
 }
