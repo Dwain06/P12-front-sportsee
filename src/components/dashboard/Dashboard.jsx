@@ -43,6 +43,7 @@ const Dashboard = () => {
                     <div className="dashboard__datas">
                         <div className="datas__charts">
                             <div className="datas__charts--activity">
+                                <h3>Activité quotidienne</h3>
                                 <ActivityCharts props={activity.sessions}/>
                             </div>
                             <div className="datas__charts--scores">
