@@ -18,6 +18,7 @@
         .activity-chart{
             background: $color-bg-light;
             padding-top: 75px;
+           
 
             .legend-format{
                 color: $color-secondary;
@@ -30,6 +31,31 @@
             top: 15px;
             left: 40px;
             font-size: 15px;
+        }
+    }
+    .datas__charts--scores{
+        position: relative;
+        margin-top: 20px;
+        width: 260px;
+        height: 210px;
+
+        .average-sessions-chart{
+            background: $color-primary;
+            padding-top: 50px;
+            border-radius: 5px;
+
+            .legend-format{
+                opacity: 0;
+            }
+        }
+
+        h3{
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            font-size: 15px;
+            color: $color-bg-light;
+            opacity: .5;
         }
     }
 }
