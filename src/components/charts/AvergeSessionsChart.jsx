@@ -10,9 +10,19 @@ const AvergeSessionsChart = ({ props }) => {
         return { ...obj, day: (days[obj.day - 1]) }
     });
 
+    const mouseOverColor = (e) => {
+        let div = document.querySelector('.average-sessions-chart')
+        if (e.isTooltipActive) {
+          let mouseX = Math.round((e.activeCoordinate.x / div.clientWidth) * 100);
+          div.style.background = `linear-gradient(90deg, #FF0101 ${mouseX}%, #E60000 ${mouseX}%)`
+        } else {
+            div.style = "none"
+        }
+    }
+
     return (
         <div className="average-sessions-chart">
-            <LineChart width={250} height={250} data={formatedDatas} >
+            <LineChart width={250} height={200} data={formatedDatas} margin={{ top: 50, right: 10, left: 20, bottom: 10 }} onMouseMove={mouseOverColor}>
                 <CartesianGrid 
                     vertical={false} 
                     horizontal={false} 
@@ -21,7 +31,6 @@ const AvergeSessionsChart = ({ props }) => {
                     dataKey="day"  
                     axisLine={false} 
                     tickLine={false} 
-                    padding={{ left: 6 }}
                     tickMargin={20}
                     tick={{ fill: "white", fillOpacity: "0.5" }}
                 />
@@ -37,6 +46,7 @@ const AvergeSessionsChart = ({ props }) => {
                     labelFormatter={() => ''} 
                     separator="" 
                     formatter={(value) => [" min", value]} 
+                    cursor={false} 
                 />
                 <Legend wrapperStyle={{opacity: 0}} />
                 <Line 

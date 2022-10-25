@@ -18,7 +18,7 @@
         .activity-chart{
             background: $color-bg-light;
             padding-top: 75px;
-           
+            border-radius: 5px;           
 
             .legend-format{
                 color: $color-secondary;
@@ -37,7 +37,7 @@
         position: relative;
         margin-top: 20px;
         width: 260px;
-        height: 210px;
+
 
         .average-sessions-chart{
             background: $color-primary;
@@ -51,8 +51,9 @@
 
         h3{
             position: absolute;
-            top: 0px;
-            left: 20px;
+            width: 150px;
+            top: 10px;
+            left: 30px;
             font-size: 15px;
             color: $color-bg-light;
             opacity: .5;
