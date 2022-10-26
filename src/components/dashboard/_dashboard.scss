@@ -36,28 +36,43 @@
     .datas__charts--scores{
         position: relative;
         margin-top: 20px;
-        width: 260px;
-
+        display: flex;
+        justify-content: space-between;
 
         .average-sessions-chart{
             background: $color-primary;
             padding-top: 50px;
             border-radius: 5px;
+            width: 260px;
+
+            .legend-format{
+                opacity: 0;
+            }
+            h3{
+                position: absolute;
+                width: 150px;
+                top: 10px;
+                left: 30px;
+                font-size: 15px;
+                color: $color-bg-light;
+                opacity: .5;
+            }
+        }
+        .performance-chart {
+            background: $color-bg-grey;
+            border-radius: 5px;
+            width: 260px;
 
             .legend-format{
                 opacity: 0;
             }
         }
-
-        h3{
-            position: absolute;
-            width: 150px;
-            top: 10px;
-            left: 30px;
-            font-size: 15px;
-            color: $color-bg-light;
-            opacity: .5;
-        }
+    }
+    .datas--nutrients{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 25px;
     }
 }
 

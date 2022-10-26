@@ -22,6 +22,8 @@ const AvergeSessionsChart = ({ props }) => {
 
     return (
         <div className="average-sessions-chart">
+            <h3>Durée moyenne des sessions</h3>
+
             <LineChart width={250} height={200} data={formatedDatas} margin={{ top: 50, right: 10, left: 20, bottom: 10 }} onMouseMove={mouseOverColor}>
                 <CartesianGrid 
                     vertical={false} 

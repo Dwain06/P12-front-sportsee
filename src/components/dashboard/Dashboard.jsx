@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import GetUserData from '../../data/GetUserData';
 import ActivityChart from '../charts/ActivityChart';
 import AvergeSessionsChart from '../charts/AvergeSessionsChart';
+import PerformanceChart from '../charts/PerformanceChart';
 import Nutrients from '../nutrients/Nutrients';
 
 const Dashboard = () => {
@@ -44,12 +45,11 @@ const Dashboard = () => {
                     <div className="dashboard__datas">
                         <div className="datas__charts">
                             <div className="datas__charts--activity">
-                                <h3>Activité quotidienne</h3>
                                 <ActivityChart props={activity.sessions}/>
                             </div>
                             <div className="datas__charts--scores">
-                                <h3>Durée moyenne des sessions</h3>
                                 <AvergeSessionsChart props={averageSessions.sessions}/>
+                                <PerformanceChart props={performance}/>
                             </div>
                         </div>
                         <div className="datas--nutrients">
