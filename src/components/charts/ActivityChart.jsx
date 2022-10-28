@@ -25,7 +25,7 @@ const ActivityChart = ({ props }) => {
         <div className="activity-chart">
             <h3>Activité quotidienne</h3>
 
-            <BarChart width={780} height={300} data={formatedDatas} margin={{ top: 5, right: 30, left: 20, bottom: 5 }} >
+            <BarChart width={800} height={300} data={formatedDatas} margin={{ top: 5, right: 30, left: 20, bottom: 5 }} >
                 <CartesianGrid 
                     strokeDasharray="3 3" 
                     vertical={false} 

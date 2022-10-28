@@ -67,6 +67,47 @@
                 opacity: 0;
             }
         }
+        .score-chart{
+            background: $color-bg-light;
+            border-radius: 5px;
+            width: 260px;
+            position: relative;
+
+            h3{
+                position: absolute;
+                width: 150px;
+                top: 10px;
+                left: 30px;
+                font-size: 15px;
+                color: $color-secondary;
+            }
+            &__percentage{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-80%);
+                text-align: center;
+                color: $color-secondary;
+
+                .percentage--number{
+                    color: $color-bg-grey;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+            &::before{
+                content: "";
+                width: 160px;
+                height: 160px;
+                box-shadow: 0 0 20px rgba(128, 128, 128, 0.2);
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+            }
+        }
     }
     .datas--nutrients{
         display: flex;

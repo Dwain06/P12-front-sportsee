@@ -3,6 +3,7 @@ import GetUserData from '../../data/GetUserData';
 import ActivityChart from '../charts/ActivityChart';
 import AvergeSessionsChart from '../charts/AvergeSessionsChart';
 import PerformanceChart from '../charts/PerformanceChart';
+import ScoreChart from '../charts/ScoreChart';
 import Nutrients from '../nutrients/Nutrients';
 
 const Dashboard = () => {
@@ -50,6 +51,7 @@ const Dashboard = () => {
                             <div className="datas__charts--scores">
                                 <AvergeSessionsChart props={averageSessions.sessions}/>
                                 <PerformanceChart props={performance}/>
+                                <ScoreChart props={generalInformations.todayScore}/>
                             </div>
                         </div>
                         <div className="datas--nutrients">
