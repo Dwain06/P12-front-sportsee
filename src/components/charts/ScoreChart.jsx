@@ -1,5 +1,5 @@
 import React from 'react';
-import { Legend, PolarAngleAxis, RadialBar, RadialBarChart, Tooltip } from 'recharts';
+import { PolarAngleAxis, RadialBar, RadialBarChart, Tooltip } from 'recharts';
 
 
 const ScoreChart = ({ props }) => {
@@ -24,7 +24,7 @@ const ScoreChart = ({ props }) => {
                     domain={[0, 100]} 
                     tick={false} 
                 />
-                <Tooltip />
+                
             </RadialBarChart>
         </div>
     );
