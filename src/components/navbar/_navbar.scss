@@ -4,6 +4,10 @@ nav{
     align-items: center;
     height: 91px;
     box-shadow: 0  0 5px black;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
 
     .logo{
         margin-left: 20px;

@@ -1,0 +1,108 @@
+// ---------- Activity Chart ----------
+
+.datas__charts--activity{
+    position: relative;
+
+    .activity-chart{
+        background: $color-bg-light;
+        padding-top: 75px;
+        border-radius: 5px;           
+
+        .legend-format{
+            color: $color-secondary;
+            font-size: 14px;
+        }
+    }
+
+    h3{
+        position: absolute;
+        top: 15px;
+        left: 40px;
+        font-size: 15px;
+    }
+}
+
+
+// ---------- Scores Charts container ----------
+
+.datas__charts--scores{
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    // ---------- Average sessions chart ----------
+    .average-sessions-chart{
+        background: $color-primary;
+        padding-top: 50px;
+        border-radius: 5px;
+        width: 260px;
+
+        .legend-format{
+            opacity: 0;
+        }
+        h3{
+            position: absolute;
+            width: 150px;
+            top: 10px;
+            left: 30px;
+            font-size: 15px;
+            color: $color-bg-light;
+            opacity: .5;
+        }
+    }
+
+    // ---------- Performance chart ----------
+    .performance-chart {
+        background: $color-bg-grey;
+        border-radius: 5px;
+        width: 260px;
+
+        .legend-format{
+            opacity: 0;
+        }
+    }
+
+    // ---------- Score chart ----------
+    .score-chart{
+        background: $color-bg-light;
+        border-radius: 5px;
+        width: 260px;
+        position: relative;
+
+        h3{
+            position: absolute;
+            width: 150px;
+            top: 10px;
+            left: 30px;
+            font-size: 15px;
+            color: $color-secondary;
+        }
+        &__percentage{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-80%);
+            text-align: center;
+            color: $color-secondary;
+
+            .percentage--number{
+                color: $color-bg-grey;
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+        &::before{
+            content: "";
+            width: 160px;
+            height: 160px;
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+        }
+    }
+}
