@@ -4,7 +4,7 @@ import { PolarAngleAxis, RadialBar, RadialBarChart } from 'recharts';
 
 const ScoreChart = ({ props }) => {
 
-    const datas = props;
+    const datas = props.todayScore ? props.todayScore : props.score;
     
     const formatedDatas = datas ? [{score : datas*100}] : [{score : 0}];
 

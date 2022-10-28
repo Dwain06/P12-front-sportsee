@@ -51,7 +51,7 @@ const Dashboard = () => {
                             <div className="datas__charts--scores">
                                 <AvergeSessionsChart props={averageSessions.sessions}/>
                                 <PerformanceChart props={performance}/>
-                                <ScoreChart props={generalInformations.todayScore}/>
+                                <ScoreChart props={generalInformations}/>
                             </div>
                         </div>
                         <div className="datas--nutrients">
