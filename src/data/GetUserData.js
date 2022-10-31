@@ -1,5 +1,11 @@
 import fetchData from "./fetchData";
 
+import calorieCount from "../assets/icons/nutrients/calorieCount.png";
+import proteinCount from "../assets/icons/nutrients/proteinCount.png";
+import carbohydrateCount from "../assets/icons/nutrients/carbohydrateCount.png";
+import lipidCount from "../assets/icons/nutrients/lipidCount.png";
+
+// Fetching datas from dev environment only
 const domainName = "http://localhost:3000/"
 
 class GetUserData {
@@ -19,22 +25,22 @@ class GetUserData {
             {
                 name: "Calories",
                 count: (nutrients.data.keyData.calorieCount / 1000).toFixed(3) + "kCal",
-                img: "calorieCount"
+                img: calorieCount
             },
             {
                 name: "Proteines",
                 count: nutrients.data.keyData.proteinCount + "g",
-                img: "proteinCount"
+                img: proteinCount
             },
             {
                 name: "Glucides",
                 count: nutrients.data.keyData.carbohydrateCount + "g",
-                img: "carbohydrateCount"
+                img: carbohydrateCount
             },
             {
                 name: "Lipides",
                 count: nutrients.data.keyData.lipidCount + "g",
-                img: "lipidCount"
+                img: lipidCount
             }
     ]
     }
