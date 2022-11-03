@@ -1,3 +1,9 @@
+/**
+ * Fetch data from url
+ * @param {string} url 
+ * @returns {Promise}
+ */
+
 async function fetchData(url) {
     return fetch(url)
         .then(function (res) {

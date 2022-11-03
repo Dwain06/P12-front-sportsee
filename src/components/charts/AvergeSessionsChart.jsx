@@ -4,12 +4,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 const AvergeSessionsChart = ({ props }) => {
 
-    const datas = props;
-    const formatedDatas = datas.map(obj => {
-        const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-        return { ...obj, day: (days[obj.day - 1]) }
-    });
-
     const mouseOverColor = (e) => {
         let div = document.querySelector('.average-sessions-chart')
         if (e.isTooltipActive) {
@@ -24,7 +18,7 @@ const AvergeSessionsChart = ({ props }) => {
         <div className="average-sessions-chart">
             <h3>Durée moyenne des sessions</h3>
 
-            <LineChart width={250} height={200} data={formatedDatas} margin={{ top: 50, right: 10, left: 20, bottom: 10 }} onMouseMove={mouseOverColor}>
+            <LineChart width={250} height={200} data={props} margin={{ top: 50, right: 10, left: 20, bottom: 10 }} onMouseMove={mouseOverColor}>
                 <CartesianGrid 
                     vertical={false} 
                     horizontal={false} 

@@ -4,24 +4,10 @@ import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart }
 
 const PerformanceChart = ({ props }) => {
 
-    const { data, kind } = props;
-
-    const formatedDatas = data.map(obj => {
-        const translateKinds = {
-            cardio: 'Cardio',
-            energy: 'Energie',
-            endurance: 'Endurance',
-            strength: 'Force',
-            speed: 'Vitesse',
-            intensity: 'Intensité',
-        };
-        return { ...obj, kind: translateKinds[kind[obj.kind]] }
-    })
-
     return (
         <div className="performance-chart">
 
-            <RadarChart outerRadius={90} width={255} height={250} data={formatedDatas}>
+            <RadarChart outerRadius={90} width={255} height={250} data={props}>
                 <PolarGrid />
                 <PolarAngleAxis 
                     dataKey="kind" 

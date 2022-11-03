@@ -13,7 +13,10 @@ const Dashboard = () => {
     const [activity, setactivity] = useState();
     const [averageSessions, setAverageSessions] = useState();
     const [performance, setPerformance] = useState();
-
+  
+    /**
+     * @type {number} Testing 2 fake users *12* or *18* for dev only
+     */
     const userId = 12;
 
     useEffect(() => {
@@ -28,8 +31,7 @@ const Dashboard = () => {
         getDatas();
 
 
-    }, []);
-
+    }, []); 
 
     return (
         <>
@@ -37,7 +39,7 @@ const Dashboard = () => {
                 <div className='dashboard'>
                     <div className="dashboard__welcome">
                         <h2>
-                            Bonjour <span className='name'>{generalInformations.userInfos.firstName}</span>
+                            Bonjour <span className='name'>{generalInformations.firstName}</span>
                         </h2>
                         <h3>
                             Félicitation ! Vous avez explosé vos objectifs hier 👏
@@ -46,12 +48,12 @@ const Dashboard = () => {
                     <div className="dashboard__datas">
                         <div className="datas__charts">
                             <div className="datas__charts--activity">
-                                <ActivityChart props={activity.sessions}/>
+                                <ActivityChart props={activity}/>
                             </div>
                             <div className="datas__charts--scores">
-                                <AvergeSessionsChart props={averageSessions.sessions}/>
+                                <AvergeSessionsChart props={averageSessions}/>
                                 <PerformanceChart props={performance}/>
-                                <ScoreChart props={generalInformations}/>
+                                <ScoreChart props={generalInformations.score}/>
                             </div>
                         </div>
                         <div className="datas--nutrients">
@@ -63,7 +65,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 :
-                <div className="loading">Loading...</div>
+                <div className="loading">Données en cours de chargement...</div>
             }
         </>
     );
