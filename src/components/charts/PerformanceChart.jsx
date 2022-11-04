@@ -1,5 +1,6 @@
 import React from 'react';
 import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from 'recharts';
+import PropTypes from "prop-types";
 
 
 const PerformanceChart = ({ props }) => {
@@ -30,6 +31,15 @@ const PerformanceChart = ({ props }) => {
             </RadarChart>
         </div>
     );
+};
+
+PerformanceChart.propTypes = {
+    props : PropTypes.arrayOf(
+        PropTypes.exact({
+            kind: PropTypes.string.isRequired,
+            value: PropTypes.number.isRequired
+        })
+    )
 };
 
 export default PerformanceChart;

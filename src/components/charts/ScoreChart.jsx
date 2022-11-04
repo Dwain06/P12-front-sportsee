@@ -1,6 +1,6 @@
 import React from 'react';
 import { PolarAngleAxis, RadialBar, RadialBarChart } from 'recharts';
-
+import PropTypes from "prop-types";
 
 const ScoreChart = ({ props }) => {
 
@@ -23,6 +23,14 @@ const ScoreChart = ({ props }) => {
             </RadialBarChart>
         </div>
     );
+};
+
+ScoreChart.propTypes = {
+    props : PropTypes.arrayOf(
+        PropTypes.exact({
+            score : PropTypes.number.isRequired
+        })
+    )
 };
 
 export default ScoreChart;

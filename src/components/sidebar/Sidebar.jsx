@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Import icons
 import icon_yoga from "../../assets/icons/sidebar/icon_yoga.png";
 import icon_swim from "../../assets/icons/sidebar/icon_swim.png";
 import icon_bike from "../../assets/icons/sidebar/icon_bike.png";

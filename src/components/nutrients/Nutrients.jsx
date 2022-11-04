@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const Nutrients = ({ props }) => {
 
@@ -13,6 +14,14 @@ const Nutrients = ({ props }) => {
             </figure>
         </>
     );
+};
+
+Nutrients.propTypes = {
+    props : PropTypes.exact({
+            count : PropTypes.string.isRequired,
+            img: PropTypes.string,
+            name : PropTypes.string.isRequired
+    })
 };
 
 export default Nutrients;

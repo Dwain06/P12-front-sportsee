@@ -1,5 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import PropTypes from "prop-types";
 
 const ActivityChart = ({ props }) => {
 
@@ -74,6 +75,17 @@ const ActivityChart = ({ props }) => {
 
         </div>
     );
+};
+
+ActivityChart.propTypes = {
+    props : PropTypes.arrayOf(
+        PropTypes.exact({
+            calories : PropTypes.number.isRequired,
+            day: PropTypes.string.isRequired,
+            dayNumber : PropTypes.string.isRequired,
+            kilogram: PropTypes.number.isRequired
+        })
+    )
 };
 
 export default ActivityChart;

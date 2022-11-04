@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import PropTypes from "prop-types";
 
 
 const AvergeSessionsChart = ({ props }) => {
@@ -56,6 +57,15 @@ const AvergeSessionsChart = ({ props }) => {
             </LineChart>
         </div>
     );
+};
+
+AvergeSessionsChart.propTypes = {
+    props : PropTypes.arrayOf(
+        PropTypes.exact({
+            day: PropTypes.string.isRequired,
+            sessionLength : PropTypes.number.isRequired
+        })
+    )
 };
 
 export default AvergeSessionsChart;

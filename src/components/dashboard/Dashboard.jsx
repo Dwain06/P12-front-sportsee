@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
+// Import datas from API
 import GetUserData from '../../data/GetUserData';
+
+// Import components
 import ActivityChart from '../charts/ActivityChart';
 import AvergeSessionsChart from '../charts/AvergeSessionsChart';
 import PerformanceChart from '../charts/PerformanceChart';
