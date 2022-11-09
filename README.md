@@ -16,8 +16,7 @@ This is OpenClassrooms project 12 - New version of user's profil page.
 
 Clone this repo [https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
-Follow instructions on readme file to run this project.
-Choose port 3001 to run both front and back
+Follow instructions on readme file to run this project. Choose to run localhost on port 3000.
 
 ### 2.2 Front end
 
@@ -30,3 +29,4 @@ Choose port 3001 to run both front and back
 - Clone it on your computer.
 - `npm install` command will allow you to install the dependencies.
 - `npm start` command will allow you to run in your brother.
+Choose localhost on port 3001 to run both front and back.
