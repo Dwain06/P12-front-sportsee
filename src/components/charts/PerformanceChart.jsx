@@ -2,8 +2,20 @@ import React from 'react';
 import { Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from 'recharts';
 import PropTypes from "prop-types";
 
+/**
+ * Component to create performance chart 
+ *
+ * @component
+ * @example
+ * [{value: 80, kind: 'Cardio'}]
+ * return (
+ *   <PerformanceChart data={props} />
+ * )
+ */
 
 const PerformanceChart = ({ props }) => {
+
+    console.log(props);
 
     return (
         <div className="performance-chart">

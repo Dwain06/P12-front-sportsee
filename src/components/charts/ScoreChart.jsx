@@ -2,6 +2,17 @@ import React from 'react';
 import { PolarAngleAxis, RadialBar, RadialBarChart } from 'recharts';
 import PropTypes from "prop-types";
 
+/**
+ * Component to create score chart 
+ *
+ * @component
+ * @example
+ * [{score: 12}]
+ * return (
+ *   <ScoreChart data={props} />
+ * )
+ */
+
 const ScoreChart = ({ props }) => {
 
     return (

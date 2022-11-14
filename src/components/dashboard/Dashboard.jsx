@@ -10,6 +10,23 @@ import PerformanceChart from '../charts/PerformanceChart';
 import ScoreChart from '../charts/ScoreChart';
 import Nutrients from '../nutrients/Nutrients';
 
+/**
+ * Component to create dashboard 
+ *
+ * @component
+ * @example
+ * 
+ * const generalInformations = 
+ * const nutrients
+ * const activity
+ * const averageSessions
+ * const performance
+ * 
+ * return (
+ *   <ScoreChart props={props} />
+ * )
+ */
+
 const Dashboard = () => {
 
     const [generalInformations, setGeneralInformations] = useState();
@@ -19,7 +36,9 @@ const Dashboard = () => {
     const [performance, setPerformance] = useState();
   
     /**
-     * @type {number} Testing 2 fake users *12* or *18* for dev only
+     * Testing 2 fake users *12* or *18* for dev only
+     * 
+     * @type {number}
      */
     const userId = 12;
 
@@ -37,6 +56,8 @@ const Dashboard = () => {
 
     }, []); 
 
+
+    console.log(generalInformations);
     return (
         <>
             {generalInformations && activity && averageSessions && performance ?

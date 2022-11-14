@@ -2,6 +2,16 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import PropTypes from "prop-types";
 
+/**
+ * Component to create average session chart 
+ *
+ * @component
+ * @example
+ * [{day: 'L', sessionLength: 30}]
+ * return (
+ *   <AvergeSessionsChart data={props} />
+ * )
+ */
 
 const AvergeSessionsChart = ({ props }) => {
 
