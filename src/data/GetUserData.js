@@ -6,9 +6,6 @@ import proteinCount from "../assets/icons/nutrients/proteinCount.png";
 import carbohydrateCount from "../assets/icons/nutrients/carbohydrateCount.png";
 import lipidCount from "../assets/icons/nutrients/lipidCount.png";
 
-// Fetching datas from dev environment only
-const domainName = "http://localhost:3000/"
-
 class GetUserData {
 
     /**
@@ -24,9 +21,9 @@ class GetUserData {
      * @returns {promise<{age: number, firstName: string, lastName: string, score: Array<{score: number}>}>}
      */
     async generalInformations() {
-        const generalInformations = await fetchData(domainName + "user/" + this.id);
+        const generalInformations = await fetchData();
 
-        const score = generalInformations.data.todayScore ? generalInformations.data.todayScore : generalInformations.data.score;
+        const score = generalInformations.data.todayScore ? generalInformations.data.todayScore : generalInformations.score;
         return { ...generalInformations.data.userInfos, score: [{score: score*100}] } // Add array of scores for Recharts
     }
 
@@ -35,7 +32,7 @@ class GetUserData {
      * @returns {promise<Array<{name: string, count: string, img: string}>>}
      */
     async nutrients(){
-        const nutrients = await fetchData(domainName + "user/" + this.id);
+        const nutrients = await fetchData();
         return [
             {
                 name: "Calories",
@@ -65,9 +62,9 @@ class GetUserData {
      * @returns {promise<Array<{calories: number, day: string, dayNumber: string, kilogram: number}>>}
      */
     async activity() {
-        const activity = await fetchData(domainName + "user/" + this.id + "/activity");
+        const activity = await fetchData();
 
-        return activity.data.sessions.map(obj => {
+        return activity.activity.sessions.map(obj => {
             obj.dayNumber = obj.day.split("-")[2]; // Add day number value to each object
             return { ...obj }
         });
@@ -78,10 +75,10 @@ class GetUserData {
      * @returns {promise<Array<{day: string, sessionLength: number}>>}
      */
     async averageSessions() {
-        const averageSessions = await fetchData(domainName + "user/" + this.id + "/average-sessions");
+        const averageSessions = await fetchData();
 
         const days = ["L", "M", "M", "J", "V", "S", "D"];
-        return averageSessions.data.sessions.map(obj => {
+        return averageSessions.averageSessions.sessions.map(obj => {
             return { ...obj, day: (days[obj.day - 1]) }
         });
     }
@@ -91,9 +88,9 @@ class GetUserData {
      * @returns {promise<Array<{value: number, kind: string}>>}
      */
     async performance() {
-        const performance = await fetchData(domainName + "user/" + this.id + "/performance");
+        const performance = await fetchData();
         
-        const { data, kind } = performance.data;
+        const { data, kind } = performance.performance;
         const translateKinds = {
             cardio: "Cardio",
             energy: "Energie",

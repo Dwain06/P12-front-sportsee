@@ -7,15 +7,13 @@ import PropTypes from "prop-types";
  *
  * @component
  * @example
- * [{value: 80, kind: 'Cardio'}]
+ * [{value: 80, kind: 'Cardio'}
  * return (
- *   <PerformanceChart data={props} />
+ *   <PerformanceChart props={props} />
  * )
  */
 
 const PerformanceChart = ({ props }) => {
-
-    console.log(props);
 
     return (
         <div className="performance-chart">

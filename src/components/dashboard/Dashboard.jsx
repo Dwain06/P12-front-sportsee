@@ -56,8 +56,6 @@ const Dashboard = () => {
 
     }, []); 
 
-
-    console.log(generalInformations);
     return (
         <>
             {generalInformations && activity && averageSessions && performance ?
