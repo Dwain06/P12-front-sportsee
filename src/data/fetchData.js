@@ -1,4 +1,4 @@
-import mokedData from "../data/mokedData.json"
+import mockedData from "../data/mockedData.json"
 
 /**
  * Fetch data from url
@@ -7,7 +7,7 @@ import mokedData from "../data/mokedData.json"
  */
 
 async function fetchData() {
-   return new Promise((res) => res(mokedData).json());
+   return new Promise((res) => res(mockedData).json());
 }
 
 export default fetchData;
